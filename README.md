@@ -85,7 +85,7 @@ oder kleinen Ausflug handelt. Hier ein Beispiel (ohne Berlin-Mitte) für Berlin:
         },
     ]
 
-Die Datei data.py muss angepasst werden: 
+Die Datei data.py muss erzeugt werden: 
     
     MAIL_ADDRESS = "my@email.com"
     MAIL_PASSWORD = "mypassword"
