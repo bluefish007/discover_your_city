@@ -50,3 +50,4 @@ elif status == 3:
                name=winner_name_dict['name'],
                email=winner_name_dict['mail'],
                message=f"Die erhaltene Antwort '{winner_subdistrict}' ist leider nicht plausibel und nicht Teil der Antwortmöglichkeiten: {winner_district_dict['subdistrict']}!")
+
