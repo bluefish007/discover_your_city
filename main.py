@@ -20,11 +20,9 @@ else:
 winner_district_dict = draw_a_winner_district(distance, history_list)
 winner_name_dict = draw_a_winner_name(history_list)
 
-print(f"""
-Bezirk: {winner_district_dict["name"]}
-Sub-Bezirke: {', '.join(winner_district_dict["subdistrict"])}
-Winner: {winner_name_dict['name']} - {winner_name_dict['mail']}
-""")
+# print('Bezirk: {winner_district_dict["name"]}')
+# print(f'Sub-Bezirke: {', '.join(winner_district_dict["subdistrict"])}')
+print(f'(Winner: {winner_name_dict["name"]} - {winner_name_dict["mail"]})')
 
 
 send_mail_to_winner(winner_name_dict, winner_district_dict)
