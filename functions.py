@@ -15,7 +15,7 @@ PLAYER = data.PLAYER
 def load_history_list():
     h_list = []
     try:
-        with open("history.txt", "r") as f:
+        with open("history_.txt", "r") as f:
             print(f.read())
             for line in f:
                 print(f"line {line}")
@@ -24,7 +24,7 @@ def load_history_list():
                 h_list.append(line_list)
             print("History loaded")
     except FileNotFoundError:
-        with open("history.txt", "w") as f:
+        with open("history_.txt", "w") as f:
             pass
     print(f"returning {h_list}")
     return h_list
