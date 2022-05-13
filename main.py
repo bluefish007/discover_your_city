@@ -4,6 +4,7 @@ from functions import *
 import data
 
 history_list = load_history_list()
+print(f"history_list: {history_list}")
 
 if calc_subdistricts_left(history_list) <= 3:  # If less than x subdistricts left -> the game is over!
     send_email(subject="",
@@ -31,8 +32,7 @@ status, winner_subdistrict = check_winner_feedback(winner_name_dict, winner_dist
 
 if status == 1:
     with open("history.txt", "a") as f:
-        f.write(
-            f"{datetime.date.today()} , {winner_name_dict['name']} , {winner_district_dict['name']} , {winner_subdistrict}\n")
+        f.write(f"{datetime.date.today()} , {winner_name_dict['name']} , {winner_district_dict['name']} , {winner_subdistrict}\n")
 
     send_email(subject=f"Discover your City - {winner_subdistrict} in {winner_district_dict['name']} wurde eingetragen!",
                name=winner_name_dict['name'],
