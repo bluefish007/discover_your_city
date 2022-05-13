@@ -23,7 +23,7 @@ def load_history_list():
     except FileNotFoundError:
         with open(os.path.join(os.path.dirname(__file__), "history.txt"), "w") as f:
             f.write("")
-    print(f"returning {h_list}")
+    # print(f"returning {h_list}")
     return h_list
 
 
