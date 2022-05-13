@@ -4,10 +4,6 @@ from functions import *
 import data
 
 history_list = load_history_list()
-print("History:")
-for history in history_list:
-    print(history)
-print("")
 
 # if calc_subdistricts_left(history_list) <= 3:  # If less than x subdistricts left -> the game is over!
 #     send_email(subject="",
