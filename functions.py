@@ -19,6 +19,7 @@ def load_history_list():
             print(f.read())
             for line in f:
                 line_list = line.rstrip('\n').split(" , ")
+                print(line_list)
                 h_list.append(line_list)
             print("History loaded")
     except FileNotFoundError:
