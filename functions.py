@@ -25,7 +25,7 @@ def load_history_list():
             print("History loaded")
     except FileNotFoundError:
         with open("history_.txt", "w") as f:
-            pass
+            f.write("")
     print(f"returning {h_list}")
     return h_list
 
