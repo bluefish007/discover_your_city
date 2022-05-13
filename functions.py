@@ -5,6 +5,7 @@ from email.message import EmailMessage
 from data_city import city_districts
 from retrieve_emails import retrieve_emails
 import data
+import os
 
 MAIL_ADDRESS = data.MAIL_ADDRESS
 MAIL_PASSWORD = data.MAIL_PASSWORD
@@ -15,7 +16,8 @@ PLAYER = data.PLAYER
 def load_history_list():
     h_list = []
     try:
-        with open("history_.txt", "r") as f:
+        with open(os.path.join(os.path.dirname(__file__), "history.txt"), "r") as f:
+        # with open("history_.txt", "r") as f:
             print(f.read())
             for line in f:
                 print(f"line {line}")
@@ -24,7 +26,8 @@ def load_history_list():
                 h_list.append(line_list)
             print("History loaded")
     except FileNotFoundError:
-        with open("history_.txt", "w") as f:
+        with open(os.path.join(os.path.dirname(__file__), "history.txt"), "w") as f:
+        # with open("history_.txt", "w") as f:
             f.write("")
     print(f"returning {h_list}")
     return h_list
