@@ -24,6 +24,7 @@ def load_history_list():
     except FileNotFoundError:
         with open("history.txt", "w") as f:
             pass
+    print(f"returning {h_list}")
     return h_list
 
 
