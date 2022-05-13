@@ -17,6 +17,7 @@ def load_history_list():
     try:
         with open("history.txt", "r") as f:
             print("History.txt loaded")
+            print(f.read())
             for line in f:
                 line_list = line.rstrip('\n').split(" , ")
                 h_list.append(line_list)
