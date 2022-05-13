@@ -17,7 +17,6 @@ def load_history_list():
     h_list = []
     try:
         with open(os.path.join(os.path.dirname(__file__), "history.txt"), "r") as f:
-        # with open("history_.txt", "r") as f:
             print(f.read())
             for line in f:
                 print(f"line {line}")
@@ -27,7 +26,6 @@ def load_history_list():
             print("History loaded")
     except FileNotFoundError:
         with open(os.path.join(os.path.dirname(__file__), "history.txt"), "w") as f:
-        # with open("history_.txt", "w") as f:
             f.write("")
     print(f"returning {h_list}")
     return h_list
